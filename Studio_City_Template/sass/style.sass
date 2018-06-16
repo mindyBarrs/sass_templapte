@@ -1,0 +1,164 @@
+@import 'variables.sass'
+
+/* Mixins */
+= showcases($height)
+    height: $height
+    background: url(../img/city.jpg) no-repeat 0 -400px
+    color: #ffffff
+    font-size: 21px
+    line-height: 1.7em
+    padding-top: 20px
+    .lead
+        padding-left: 50px
+    h1
+        background: $dark-grey-color
+        padding: 20px
+        opacity: 0.7
+
+= buttons($btn-color)
+    background: $btn-color
+    padding: 15px
+    color: white
+    border: 1px solid $btn-color
+    border-radius: 5px
+    margin-right: 15px
+    &:hover
+        background: none
+        color: $btn-color
+        text-decoration: none
+
+= sections($background-color, $fonts-color)
+    background: $background-color
+    color: $fonts-color
+    padding: 20px
+    text-align: center
+    font-size: 22px
+
+body
+    background: $light-grey-color
+    font-family: $main-font
+    font-size: 16px
+    line-height: 1.4em
+    margin: 0px
+    padding: 0px
+
+h1, h2, h3, h4, h5, h6
+    font-family: $heading-font
+    font-weight: bold !important
+
+header
+    background: $dark-blue-color
+    color: #fff
+    height: 60px
+
+footer
+    padding: 30px 0
+    margin-top: 30px
+    background: $dark-blue-color
+    color: #ffffff
+
+nav
+    float: right
+    ul
+        padding-top: 15px
+    li
+        list-style: none
+        float: left
+        padding-right: 20px
+    li a 
+        text-decoration: none
+        color: #fff
+        &:hover, &.active
+            color: $green-color
+
+.container
+    width: $template-width
+    margin: auto
+    overflow: auto
+
+#logo
+    padding: 10px
+    float: left
+    
+.showcase
+    +showcases(400px)
+
+.showcase .container
+    height: 500px
+    overflow: auto
+    
+.showcase-inner
+    +showcases(150px)
+
+.btn-Read
+    +buttons($blue-color)
+
+.btn-contact
+    +buttons($green-color)
+
+.section-a
+    +sections($blue-color, #ffffff)
+
+.section-b
+    padding: 20px 0px
+
+.box
+    width: 24%
+    float: left
+    text-align: center
+    h3
+        font-size: 1.3rem
+
+.fas, .far
+    font-size: $icon-size
+    color: $blue-color
+
+.home-list
+    padding: 0px
+    margin: 0
+    list-style: none
+    li
+        background: $dark-grey-color
+        padding: 10px
+        margin-bottom: 10px
+        color: $light-grey-color
+        h3
+            font-size: 1.3rem
+
+.port
+    width: 24%
+    float: left
+    padding-right: 10px
+    text-align: center
+    margin-top: 25px
+    img
+        width: 100%
+
+.main
+    margin-top: 25px
+
+form#contact div
+    background: $dark-grey-color
+    padding: 15px
+    margin-bottom: 5px
+
+form#contact label
+    color: $light-grey-color
+
+form#contact input[type="text"],
+form#contact input[type="email"],
+form#contact input[type="phone"]
+    width: 100%
+    height: 30px
+    border: 1px solid $light-grey-color
+    padding: 5px
+
+form#contact textarea
+    height: 70px
+    border: 1px solid $light-grey-color
+    padding: 5px
+    width: 100%
+    resize: none
+
+.btn-submit
+    +buttons($green-color)
