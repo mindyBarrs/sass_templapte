@@ -1,1 +1,4 @@
-sass_templapte
+Sass Template
+==============
+
+A Website Template created using sass.
